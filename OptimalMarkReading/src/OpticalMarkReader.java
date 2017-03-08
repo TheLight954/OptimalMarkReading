@@ -23,7 +23,7 @@ public class OpticalMarkReader {
 		
 		return image.pixels[index];
 	}
-	public static boolean isBubbled(PImage p,int r, int c, int h, int w,int threshold){
+	public static boolean isBubbled(PImage p,int r, int c, int h, int w, int threshold){
 		int sum = 0;
 		for(int i = r; i < r + h; i++){
 			for(int j = c; j < c + w; j++){
@@ -32,5 +32,19 @@ public class OpticalMarkReader {
 		}
 		return sum >= (threshold*h*w);
 	}
-	
+	public static AnswerSheet convertImageToAnswerSheet(PImage p, int u, int l, int du, int dl, int bubbles){
+		AnswerSheet a = new AnswerSheet();
+		for(int i=0; i<bubbles; i++)
+		{
+			a[i] = new ArrayList<int>;
+			for(int j=0; j<5; j++) 
+			{
+				if(isBubbled(P, u+i*du, l+j*dl, du, dl, 75))
+				{
+					a[i].add(j);
+				}
+			}
+		}
+		return a;
+	}
 }
