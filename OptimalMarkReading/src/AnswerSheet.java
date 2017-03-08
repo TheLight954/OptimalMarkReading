@@ -3,5 +3,5 @@
  */
 public class AnswerSheet {
 	int id;
-	String[] answers;
+	ArrayList<int>[] answers;
 }
