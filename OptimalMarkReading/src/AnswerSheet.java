@@ -13,7 +13,7 @@ public class AnswerSheet {
 	}
 	public void toString() {
 		for(int i=0; i<answers.length; i++) {
-			System.out.println((i+1) + " " + answers.convertToString());
+			System.out.println((i+1) + ", " + answers.convertToString());
 		}
 	}
 }
