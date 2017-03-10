@@ -1,0 +1,7 @@
+public class Item {
+     int right;
+     int total;
+     public String toString(Item x) {
+           System.out.println(total - right + 100*(total-right)/total);
+     }
+}
