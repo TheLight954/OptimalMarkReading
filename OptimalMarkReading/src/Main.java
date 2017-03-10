@@ -37,7 +37,8 @@ public class Main {
 			ScoredSheets.add(OpticalMarkReader.processPageImage(image, 100, 30, 30, 30));
 		}
 		for(int i=0; i < scoredSheets.size(); i++) {
-			grade(scoredSheets);
+			Item[] items = new Item[50];
+			grade(scoredSheets, items);
 		}
 	}
 }
