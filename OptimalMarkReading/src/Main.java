@@ -32,10 +32,12 @@ public class Main {
 		// Score the first page as the key
 		AnswerSheet key = OpticalMarkReader.processPageImage(images.get(0));
 
-		for (int i = 1; i < images.size(); i++) {
+		for (int i = 0; i < images.size(); i++) {
 			PImage image = images.get(i);
 			ScoredSheets.add(OpticalMarkReader.processPageImage(image, 100, 30, 30, 30));
-
+		}
+		for(int i=0; i < scoredSheets.size(); i++) {
+			grade(scoredSheets);
 		}
 	}
 }
