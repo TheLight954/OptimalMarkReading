@@ -30,14 +30,12 @@ public class Main {
 		ArrayList<AnswerSheet> scoredSheets = new ArrayList<AnswerSheet>();
 
 		// Score the first page as the key
-		AnswerSheet key = markReader.processPageImage(images.get(0));
+		AnswerSheet key = OpticalMarkReader.processPageImage(images.get(0));
 
 		for (int i = 1; i < images.size(); i++) {
 			PImage image = images.get(i);
+			ScoredSheets.add(OpticalMarkReader.processPageImage(image, 100, 30, 30, 30));
 
-			AnswerSheet answers = markReader.processPageImage(image);
-
-			// do something with answers
 		}
 	}
 }
