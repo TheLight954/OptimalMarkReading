@@ -16,6 +16,15 @@ public class AnswerSheet {
 				wrong++;
 			}
 		}
-		System.out.println("# Correct " + correct + "# Wrong " + wrong + "% Correct " + 100*correct/(correct+wrong) + "% Wrong " + 100*wrong/(correct+wrong));
+		String Text = "";
+		Text += "# Correct " + correct + "# Wrong " + wrong + "% Correct " + 100*correct/(correct+wrong) + "% Wrong " + 100*wrong/(correct+wrong)";
+		try{
+		 FileWriter fstream = new FileWriter("out.txt");
+		 BufferedWriter out = new BufferedWriter(fstream);
+		 out.write(texttoWrite);
+		 out.close();
+		 }catch (Exception e){
+		  System.err.println("Error: " + e.getMessage());
+		 }
 	}
 }
