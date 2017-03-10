@@ -41,10 +41,15 @@ public class OpticalMarkReader {
 			{
 				if(isBubbled(P, u+i*du, l+j*dl, du, dl, 75))
 				{
-					a[i].add(j);
+					a[i].add(j+1);
 				}
 			}
 		}
 		return a;
+	}
+	public static grade(AnswerSheet[] x) {
+		for(int i=1; i<x.length; i++) {
+			compareAnswerSheets(x[i], x[0]);
+		}
 	}
 }
