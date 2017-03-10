@@ -43,9 +43,9 @@ public class OpticalMarkReader {
 		}
 		return a;
 	}
-	public static grade(AnswerSheet[] x) {
+	public static grade(AnswerSheet[] x, int[] items) {
 		for(int i=0; i<x.length; i++) {
-			AnswerSheets.compareAnswerSheets(x[i], x[0]);
+			AnswerSheets.compareAnswerSheets(x[i], x[0], items);
 		}
 	}
 }
