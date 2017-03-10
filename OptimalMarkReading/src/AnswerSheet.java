@@ -3,17 +3,19 @@
  */
 public class AnswerSheet {
 	int id;
-	String alphabet = "ABCDE";
 	ArrayList<int>[] answers;
-	public int convertToString(ArrayList<int> a) {
-		for(int i=0; i<a.size()-1; i++) {
-			System.out.print(a.get(i) + " ");
-		}
-		System.out.print(a.get(a.size()-1));
-	}
-	public void toString() {
+	public void compareAnswerSheets(AnswerSheet a, AnswerSheet answerKey) {
+		int correct = 0;
+		int wrong = 0;
 		for(int i=0; i<answers.length; i++) {
-			System.out.println((i+1) + ", " + answers.convertToString());
+			if(a.answers[i] == answerKey.answers[i]) {
+				correct++;
+			}
+			else
+			{
+				wrong++;
+			}
 		}
+		System.out.println("# Correct " + correct + "# Wrong " + wrong + "% Correct " + 100*correct/(correct+wrong) + "% Wrong " + 100*wrong/(correct+wrong));
 	}
 }
