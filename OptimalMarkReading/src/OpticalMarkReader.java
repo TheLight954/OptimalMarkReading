@@ -44,8 +44,8 @@ public class OpticalMarkReader {
 		return a;
 	}
 	public static grade(AnswerSheet[] x) {
-		for(int i=1; i<x.length; i++) {
-			compareAnswerSheets(x[i], x[0]);
+		for(int i=0; i<x.length; i++) {
+			AnswerSheets.compareAnswerSheets(x[i], x[0]);
 		}
 	}
 }
