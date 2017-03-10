@@ -38,7 +38,7 @@ public class Main {
 		}
 		for(int i=0; i < scoredSheets.size(); i++) {
 			Item[] items = new Item[50];
-			grade(scoredSheets, items);
+			OpticalMarkReader.grade(scoredSheets, items);
 		}
 	}
 }
