@@ -11,10 +11,6 @@ public class OpticalMarkReader {
 	 * @param image
 	 * @return
 	 */
-	public AnswerSheet processPageImage(PImage image) {
-		
-		return null;
-	}
 	
 	public static int getPixelAt(int row, int col, PImage image) {
 		image.loadPixels();
@@ -32,7 +28,7 @@ public class OpticalMarkReader {
 		}
 		return sum >= (threshold*h*w);
 	}
-	public static AnswerSheet convertImageToAnswerSheet(PImage p, int u, int l, int du, int dl, int bubbles){
+	public static AnswerSheet processPageImage(PImage p, int u, int l, int du, int dl, int bubbles){
 		AnswerSheet a = new AnswerSheet();
 		for(int i=0; i<bubbles; i++)
 		{
