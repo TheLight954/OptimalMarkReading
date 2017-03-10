@@ -47,5 +47,8 @@ public class OpticalMarkReader {
 		for(int i=0; i<x.length; i++) {
 			AnswerSheets.compareAnswerSheets(x[i], x[0], items);
 		}
+		for(int i=0; i<50; i++) {
+			items[i].Item.toString();	
+		}
 	}
 }
